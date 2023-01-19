@@ -1,0 +1,23 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Список едоков спаржи";
+}
+
+<h1>Список едоков</h1>
+
+<p>
+    <a asp-action="Add">Add Yourself</a>
+</p>
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
